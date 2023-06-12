@@ -31,7 +31,7 @@
   }
   
   header nav ul li a:hover {
-    color: #0794F6;
+    color: #F6078D;
     text-decoration: none;
   }
   
@@ -61,12 +61,28 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
   
-  .intro h1 {
-    font-size: 28px;
+  .intro #typing-text {
+    font-size: 30px;
+    font-weight: 600;
     margin-top: 20px;
-    color: #ffffff; /* Set the desired text color */
+    color: #fff; /* Set the desired text color */
+    text-shadow: 0 9px 12px #333;
+  }
+
+  #typing-text::after {
+    content: '|'; /* Set the content to the desired pointer symbol */
+    display: inline-block;
+    width: 8px; /* Adjust the width to change the thickness of the pointer */
+    height: 20px; /* Adjust the height to change the length of the pointer */
+    animation: blink-caret 0.7s infinite; /* Add a blinking animation */
   }
   
+  @keyframes blink-caret {
+    50% {
+      opacity: 0; /* Make the pointer invisible at 50% of the animation */
+    }
+  }
+ 
   .intro p {
     font-size: 18px;
     color: #ffffff; /* Set the desired text color */
@@ -145,7 +161,7 @@
   
   form button {
     padding: 10px 20px;
-    background: linear-gradient(to right, #ff4b1f, #ff9068);
+    background: linear-gradient(to right, #ff3d14, #F6F607);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -161,7 +177,7 @@
   
   /* Apply styles to the footer */
   footer {
-    background: linear-gradient(to right, #ff4b1f, #ff9068);
+    background: linear-gradient(to right, #ff3d14, #F6F607);
     padding: 20px;
     color: #fff;
     text-align: center;
@@ -228,4 +244,3 @@
     background-color: #ff3d14;
     transform: scale(1.05);
   }
-  
